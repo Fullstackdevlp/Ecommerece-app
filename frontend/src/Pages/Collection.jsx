@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import { assets } from '../assets/assets';
 import Title from '../Components/Title'
-import ProductItem from '../Components/ProductItem';
+import ProductItem from '../Components/Productitem';
 const Collection = () =>    {
   
   const { products, search, showSearch } = useContext(ShopContext);
@@ -78,7 +78,7 @@ const sortProduct = () => {
 
 useEffect(() => {
 applyFilter();
-},[category,subCategory,search,showSearch])
+},[category,subCategory,search,showSearch,products])
 
 
 useEffect(() => {
